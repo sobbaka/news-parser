@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Homepage</title>
+
+    <link rel="stylesheet" href="/static/css/spinner.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
 </head>
+
 <body>
 
-    <h1>Enter keywords</h1>
-    <form method="POST" action="/">
-        <label for="name">Phrase:</label>
-        <input type="text" name="phrase" id="phrase" required><br>
-        <input type="submit" value="Send">
-    </form>
+    <div class="container">
+        <h1 class="title">Enter keywords</h1>
+        <form method="POST" action="/" class="form">
+            <label for="name" class="form__label">Phrase(s):</label>
+            <input type="text" name="phrase" id="phrase" required class="form__input">
+            <input type="submit" value="Send" class="form__btn btn">
+        </form>
+        <div class="lds-ring hidden">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <p class="description">Enter keywords separated by commas. Search is conducted on the Dutch version of Google
+            News.
+        </p>
+    </div>
+    <script src="/static/js/spinner.js"></script>
 </body>
+
 </html>
